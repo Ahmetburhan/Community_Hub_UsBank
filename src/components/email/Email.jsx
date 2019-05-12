@@ -1,7 +1,7 @@
 import React from "react";
 import "./email.css";
 import DonutChart from "../donutChart/DonutChart";
-
+import Breadcrumb from "../breadcrumb/Breadcrumb";
 const emailData = {
   labels: ["Email Sent", "Opened", "Bounced"],
   datasets: [
@@ -66,7 +66,8 @@ export default class Email extends React.Component {
   render() {
     return (
       <div>
-        <h1>Email</h1>
+        <h5 class="topH5">Email</h5>
+        <Breadcrumb />
         <div class="row">
           <div class="col-md-3">
             <DonutChart data={emailData} />
