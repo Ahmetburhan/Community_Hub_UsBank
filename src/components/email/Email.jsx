@@ -68,31 +68,39 @@ export default class Email extends React.Component {
       <div>
         <h5 class="topH5">Email</h5>
         <Breadcrumb />
-        <div class="container-fluid">
+        <div class="container-fluid wd-95">
 
         <div class="row">
-          <div class="col-md-3 bdThin">
+          <div class="col-md-3 bdThin mg-5 mw-24">
             <DonutChart data={emailData} />
           </div>
-          <div class="col-md-3 bdThin">
+          <div class="col-md-3 bdThin mg-5 mw-24">
             <DonutChart data={deliveryData} />
           </div>
-          <div class="col-md-3 bdThin">
+          <div class="col-md-3 bdThin mg-5 mw-24">
             <DonutChart data={openData} />
           </div>
-          <div class="col-md-3 bdThin">
+          <div class="col-md-3 bdThin mg-5 mw-24">
             <DonutChart data={clickData} />
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3 bdThin">
+          <div class="col-md-3 bdThin mg-5 mw-24">
             <DonutChart data={unsubscribeData} />
           </div>
-          <div class="col-md-3 bdThin">
+          <div class="col-md-3 bdThin mg-5 mw-24">
             <DonutChart data={bounceData} />
           </div>
-          <div class="col bdThin" />
+          <div class="col bdThin mg-5" />
         </div>
+     
+      <div class="row">
+          <div class="col bdThin mg-5">
+          Top Ten Performers
+          </div>
+      </div>
+
+
       </div>
       </div>
     );

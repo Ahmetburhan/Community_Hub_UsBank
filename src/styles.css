@@ -1,11 +1,15 @@
 .App {
-  font-family: Nunito, sans-serif;
+  font-family: Nunito, sans-serif !important;
   text-align: center;
 }
 
+body {
+  font-family: Nunito, sans-serif !important;
+
+}
 .topH5 {
   font-size: 1.4rem;
-  padding: .5rem 1rem 0 1rem;
+  padding: 0.5rem 1rem 0 1rem;
 }
 
 .breadcrumb {
@@ -13,17 +17,30 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 0 .75rem 1rem 1.0rem !important;
+  padding: 0 0.75rem 1rem 1rem !important;
   margin-bottom: 1rem;
   list-style: none;
   background-color: transparent !important;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   font-family: Nunito;
 }
-.bdThin{
+.bdThin {
   border: 1px solid #dfe1e5;
   border-radius: 8px;
 }
-.bdThin:hover{
-  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.15);
+.bdThin:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.mg-5{
+  margin: 5px;
+}
+.wd-95{
+  width:95% !important;
+}
+.mw-24{
+  max-width: 24% !important;
+}
+.wd-100{
+  width: 100% !important;
 }
