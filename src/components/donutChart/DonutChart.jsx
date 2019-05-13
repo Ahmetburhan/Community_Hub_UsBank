@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2";
 
 Chart.defaults.global.animation.animationSteps = 100;
-Chart.defaults.global.animation.duration = 2000;
+Chart.defaults.global.animation.duration = 3000;
 Chart.defaults.global.animation.animationEasing = "easeInOutBounce";
 Chart.defaults.global.animation.animateScale = true;
 Chart.defaults.global.animation.bezierCurve = true;

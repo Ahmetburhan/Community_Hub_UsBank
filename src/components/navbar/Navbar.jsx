@@ -44,7 +44,7 @@ export default class Navbar extends React.Component {
           </NavItem>
           <NavItem>
             <NavLink>
-              <Link to="/">Push Notification</Link>
+              <Link to="/push">Push Notification</Link>
             </NavLink>
           </NavItem>
 
