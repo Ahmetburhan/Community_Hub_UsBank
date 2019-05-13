@@ -91,12 +91,16 @@ export default class Email extends React.Component {
           <div class="col-md-3 bdThin mg-5 mw-24">
             <DonutChart data={bounceData} />
           </div>
-          <div class="col bdThin mg-5" />
+          <div class="col bdThin mg-5">
+          <h6 id="cardHeader">Email Traffic</h6>
+
+          </div>
+          
         </div>
      
       <div class="row">
           <div class="col bdThin mg-5">
-          Top Ten Performers
+          <h6 id="cardHeader">Top Ten Performers</h6>
           </div>
       </div>
 

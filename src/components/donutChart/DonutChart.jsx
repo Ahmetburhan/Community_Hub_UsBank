@@ -40,7 +40,7 @@ export default class DonutChart extends Component {
     const options = {
       maintainAspectRatio: true,
       title: {
-        display: true,
+        display: false,
         text: "Email Sent"
       },
       responsive: true,
@@ -72,9 +72,11 @@ export default class DonutChart extends Component {
         labels: {}
       }
     };
+    const chartLabel = this.state.data && this.state.data.labels[0];
+    console.log(chartLabel)
     return (
       <div>
-        {/* <h4>Doughnut Example</h4> */}
+      <h6 class="cardHeader">{chartLabel}</h6>
         <Doughnut
           width="75"
           height="75"

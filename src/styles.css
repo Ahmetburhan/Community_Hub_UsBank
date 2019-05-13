@@ -44,3 +44,8 @@ body {
 .wd-100{
   width: 100% !important;
 }
+#cardHeader{
+  padding: 0.5rem;
+  font-weight: 700;
+  color: #6f6f6f;
+}
