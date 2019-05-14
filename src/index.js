@@ -10,6 +10,8 @@ import Push from "../src/components/push/Push";
 import Sms from "../src/components/sms/Sms";
 import Navbar from "../src/components/navbar/Navbar";
 import DonutChart from "../src/components/donutChart/DonutChart";
+import CreatePush from "../src/components/createPush/CreatePush";
+
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/push" component={Push} />
         <Route path="/sms" component={Sms} />
         <Route path="/donutChart" component={DonutChart} />
+        <Route path="/createpush" component={CreatePush} />
+
       </div>
     </Router>
   );

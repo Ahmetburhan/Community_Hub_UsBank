@@ -69,43 +69,38 @@ export default class Email extends React.Component {
         <h5 class="topH5">Email</h5>
         <Breadcrumb />
         <div class="container-fluid wd-95">
+          <div class="row">
+            <div class="col-md-3 bdThin mg-5 mw-24">
+              <DonutChart data={emailData} />
+            </div>
+            <div class="col-md-3 bdThin mg-5 mw-24">
+              <DonutChart data={deliveryData} />
+            </div>
+            <div class="col-md-3 bdThin mg-5 mw-24">
+              <DonutChart data={openData} />
+            </div>
+            <div class="col-md-3 bdThin mg-5 mw-24">
+              <DonutChart data={clickData} />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 bdThin mg-5 mw-24">
+              <DonutChart data={unsubscribeData} />
+            </div>
+            <div class="col-md-3 bdThin mg-5 mw-24">
+              <DonutChart data={bounceData} />
+            </div>
+            <div class="col bdThin mg-5">
+              <h6 id="cardHeader">Email Traffic</h6>
+            </div>
+          </div>
 
-        <div class="row">
-          <div class="col-md-3 bdThin mg-5 mw-24">
-            <DonutChart data={emailData} />
-          </div>
-          <div class="col-md-3 bdThin mg-5 mw-24">
-            <DonutChart data={deliveryData} />
-          </div>
-          <div class="col-md-3 bdThin mg-5 mw-24">
-            <DonutChart data={openData} />
-          </div>
-          <div class="col-md-3 bdThin mg-5 mw-24">
-            <DonutChart data={clickData} />
+          <div class="row">
+            <div class="col bdThin mg-5">
+              <h6 id="cardHeader">Top Ten Performers</h6>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-3 bdThin mg-5 mw-24">
-            <DonutChart data={unsubscribeData} />
-          </div>
-          <div class="col-md-3 bdThin mg-5 mw-24">
-            <DonutChart data={bounceData} />
-          </div>
-          <div class="col bdThin mg-5">
-          <h6 id="cardHeader">Email Traffic</h6>
-
-          </div>
-          
-        </div>
-     
-      <div class="row">
-          <div class="col bdThin mg-5">
-          <h6 id="cardHeader">Top Ten Performers</h6>
-          </div>
-      </div>
-
-
-      </div>
       </div>
     );
   }
