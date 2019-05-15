@@ -9,7 +9,11 @@ import {
   NavLink
 } from "reactstrap";
 
+
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/react-fontawesome";
 
 import "./navbar.css";
 export default class Navbar extends React.Component {
@@ -31,7 +35,7 @@ export default class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <Nav tabs>
+        <Nav color="dark" tabs>
           <NavItem>
             <NavLink active>
               <Link to="/">Email</Link>
@@ -48,19 +52,28 @@ export default class Navbar extends React.Component {
             </NavLink>
           </NavItem>
 
-          {/* <Dropdown style={{"fontWeight":"bold"}}nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-            <DropdownToggle nav caret>
-              Dropdown
+          <Dropdown
+            style={{ fontWeight: "bold", float: "right" }}
+            nav
+            isOpen={this.state.dropdownOpen}
+            toggle={this.toggle}
+          >
+            <DropdownToggle nav>
+              <FontAwesomeIcon icon={faCoffee} />
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem header>Header</DropdownItem>
-              <DropdownItem disabled>Action</DropdownItem>
-              <DropdownItem>Another Action</DropdownItem>
+              <DropdownItem header>Create a New</DropdownItem>
               <DropdownItem divider />
-              <DropdownItem>Another Action</DropdownItem>
+
+              <DropdownItem>Push Notification</DropdownItem>
+              <DropdownItem disabled>SMS</DropdownItem>
+              <DropdownItem disabled>E-Mail</DropdownItem>
+              <DropdownItem divider />
+        <DropdownItem>Another Action</DropdownItem>
             </DropdownMenu>
-          </Dropdown> */}
+          </Dropdown>
         </Nav>
+        
       </div>
     );
   }
