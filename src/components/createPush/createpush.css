@@ -1,0 +1,13 @@
+.snippet pre code {
+  font-size: 14px;
+  display: block;
+  padding: 0.5em;
+  background: #333;
+  color: #f8f8f8;
+  border-radius: 4px;
+}
+
+.bg{
+  background-color: #333;
+    min-width: 40%;
+}

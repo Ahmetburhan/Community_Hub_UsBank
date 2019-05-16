@@ -11,9 +11,26 @@ export default class CreatePush extends React.Component {
         <Breadcrumb />
         <div class="container-fluid wd-95">
           <div class="row">
-            <div class="col-md-5 bdThin mg-5 mw-24" />
+            <div class="col-md-5 bdThin mg-5 mw-24 bg">
+              <div class="snippet">
+                <div>
+                  <pre class="prettyprint">
+                    <code class="javascript">
+                      {`
+  key :<span class="string">"F4"</span>,
+  shift : <span class="literal">true</span>,
+  callback : {
+    fn : <span class="string">"destroyTheWorld"</span>,
+    scope : <span class="keyword">this</span>
+  `}
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
             <div class="col bdThin mg-5">
-              <h6 id="cardHeader">Email Traffic</h6>
+              <h6 id="cardHeader">Form</h6>
             </div>
           </div>
 
