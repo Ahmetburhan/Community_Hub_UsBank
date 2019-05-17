@@ -19,6 +19,7 @@ import DonutChart from "../src/components/donutChart/DonutChart";
 import CreatePush from "../src/components/createPush/CreatePush";
 
 import SideBar from "../src/components/sidebar/SideBar";
+import Compare from "../src/components/compare/Compare";
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
         <Route path="/donutChart" component={DonutChart} />
         <Route path="/createpush" component={CreatePush} />
         <Route path="/sidebar" component={SideBar} />
+        <Route path="/compare" component={Compare} />
+
       </div>
       </div>
     </Router>

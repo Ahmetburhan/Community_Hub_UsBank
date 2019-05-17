@@ -1,11 +1,33 @@
 import React from "react";
 import "./sidebar.css";
+import HubLogo from "../../assets/images/the_hub.png";
 
 export default class SideBar extends React.Component {
   render() {
     return (
       <div>
         <div class="elements__Container-sc-1evjtfp-0 czADsK">
+          {/* logo at sidebar */}
+          {/* <span tabindex="0">
+            <div class="elements__IconContainer-sc-1evjtfp-1 hjAeFz">
+              <img
+                width="44px"
+                class=""
+                style={{ marginLeft: "5px", display: "block" }}
+                src={HubLogo}
+              />
+            </div>
+          </span> */}
+          {/* hr add */}
+          {/* <span tabindex="0">
+            <div class="elements__IconContainer-sc-1evjtfp-1 hjAeFz">
+              <hr
+                width="1"
+                class="elements__Border-sc-10vz6ag-0 hfaVTK"
+                style={{ transform: "rotate(-90deg)", marginLeft: "24px", height:"1.5rem", width:"2px" }}
+              />
+            </div>
+          </span> */}
           <span tabindex="0">
             <div class="elements__IconContainer-sc-1evjtfp-1 hjAeFz">
               <svg width="1em" height="1em" viewBox="0 0 40 40">
