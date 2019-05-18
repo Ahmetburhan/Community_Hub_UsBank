@@ -36,7 +36,7 @@ export default class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <Nav color="dark" tabs>
+        <Nav color="dark" className="ulStyle" tabs>
           <NavbarBrand
             style={{
               textTransform: "uppercase",
