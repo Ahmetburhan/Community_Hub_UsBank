@@ -12,9 +12,21 @@
 
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
-  border-color: #787c7d;
+  border-color: transparent;
 }
 
+.nav-tabs .nav-link {
+  border-bottom: 5px solid transparent !important;
+}
+.nav-tabs .nav-link:hover {
+  border-bottom: 5px solid #37a2eb !important;
+}
+
+.nav-tabs .nav-link {
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
 .hfaVTK {
   display: inline;
   height: 22px;
@@ -33,7 +45,8 @@
 .ulStyle {
   font-family: Nunito, -webkit-pictograph;
   display: flex;
-  position: fixed;
+  /* temporary disabeled */
+  /* position: fixed; */
   z-index: 5;
   -webkit-box-pack: justify;
   /* justify-content: space-between; */
@@ -49,17 +62,4 @@
   margin: 0px;
   flex: 0 0 3rem;
   border-bottom: 1px solid rgb(17, 21, 24);
-}
-
-.nav-tabs .nav-link {
-  border-bottom: 5px solid transparent !important;
-}
-.nav-tabs .nav-link:hover {
-  border-bottom: 5px solid #37a2eb !important;
-}
-
-.nav-tabs .nav-link {
-  /* border: 1px solid transparent; */
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
 }
