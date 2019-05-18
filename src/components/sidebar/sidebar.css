@@ -34,4 +34,7 @@
 
 .hjAeFz:hover {
   color: rgb(255, 255, 255);
+  border-left: 3px solid #37a2eb;
+  /* color: #37a2eb; */
+  border-radius: 9999px;
 }
