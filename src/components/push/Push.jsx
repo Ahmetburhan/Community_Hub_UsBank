@@ -296,8 +296,6 @@ export default class Push extends React.Component {
       { Pennsylvania: "18" },
       { Illinous: "12" },
       { Michigan: "9" }
-
-
     ];
     return (
       <div>
@@ -318,11 +316,11 @@ export default class Push extends React.Component {
               <h6 id="cardHeader">Push Notification by State</h6>
               {states.map(state => {
                 return (
-                  <div style={{marginBottom:"20px"}}>
-                    <div className="" >
+                  <div style={{ marginBottom: "20px" }}>
+                    <div className="">
                       <span>{Object.keys(state)[0]}</span>
                       <span style={{ float: "right" }}>
-                        %{ Object.values(state)[0]}
+                        %{Object.values(state)[0]}
                       </span>
                     </div>
                     <Progress value={Object.values(state)[0]} />
