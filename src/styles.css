@@ -5,11 +5,13 @@
 
 body {
   font-family: Nunito, sans-serif !important;
-
 }
 .topH5 {
   font-size: 1.4rem;
   padding: 0.5rem 1rem 0 1rem;
+}
+.mt-48 {
+  margin-top: 48px;
 }
 
 .breadcrumb {
@@ -32,19 +34,19 @@ body {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
 }
 
-.mg-5{
+.mg-5 {
   margin: 5px;
 }
-.wd-95{
-  width:95% !important;
+.wd-95 {
+  width: 95% !important;
 }
-.mw-24{
+.mw-24 {
   max-width: 24% !important;
 }
-.wd-100{
+.wd-100 {
   width: 100% !important;
 }
-#cardHeader{
+#cardHeader {
   padding: 0.5rem;
   font-weight: 700;
   color: #6f6f6f;

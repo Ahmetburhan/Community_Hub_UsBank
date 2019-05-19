@@ -27,6 +27,10 @@
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
+
+.nav-tabs {
+  border-bottom: 1px solid transparent !important;
+}
 .hfaVTK {
   display: inline;
   height: 22px;
@@ -46,8 +50,8 @@
   font-family: Nunito, -webkit-pictograph;
   display: flex;
   /* temporary disabeled */
-  /* position: fixed; */
-  z-index: 5;
+  position: fixed;
+  z-index: 1;
   -webkit-box-pack: justify;
   /* justify-content: space-between; */
   -webkit-box-align: center;

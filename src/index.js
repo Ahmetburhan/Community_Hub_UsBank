@@ -25,9 +25,10 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <SideBar />
-      <div style={{ marginLeft: "48px" }}>
+      <div style={{ marginLeft: "48px", paddingTop: "48px" }}>
+        <SideBar />
         <div>
+          {/* <div style={{ marginTop: "48px" }}> */}
           <Route exact path="/" component={Email} />
           <Route path="/push" component={Push} />
           <Route path="/sms" component={Sms} />
