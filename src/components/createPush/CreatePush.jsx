@@ -3,7 +3,7 @@ import "./createpush.css";
 import DonutChart from "../donutChart/DonutChart";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
 import Highlight from "react-highlight";
-
+// import "/no"
 export default class CreatePush extends React.Component {
   render() {
     return (
@@ -14,13 +14,22 @@ export default class CreatePush extends React.Component {
           <div class="row">
             <div class="col-md-5 bdThin mg-5 mw-24 bg">
               {/* <div class="snippet"> */}
-              <div class="">
+              <div class="snippet">
                 <div>
                   {/* <Highlight innerHTML={true}>{'<p>Hello world</p>'}</Highlight> */}
 
-                  <Highlight language="javascript">
-                    {`function foo()
-                     { return 'bar' }`}
+                  <Highlight language="swift">
+                    {`{
+   “aps” : {
+      “alert” : {
+         “title” : “Game Request”,
+         “subtitle” : “Five Card Draw”
+         “body” : “Bob wants to play poker”,
+      },
+      “category” : “GAME_INVITATION”
+   },
+   “gameID” : “12345678”
+}`}
                   </Highlight>
                 </div>
               </div>
