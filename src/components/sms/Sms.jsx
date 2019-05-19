@@ -406,7 +406,7 @@ export default class Sms extends React.Component {
               })}{" "}
             </div>
 
-            <div class="col-auto bdThin mg-5">
+            <div class="col bdThin mg-5">
               <div id="chartdiv" style={{ width: "100%", height: "500px" }} />
             </div>
             <div class="col-md-3 bdThin mg-5 mw-24">

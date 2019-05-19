@@ -26,17 +26,16 @@ function App() {
     <Router>
       <Navbar />
       <SideBar />
-      <div style={{marginLeft: "48px"}}>
-      <div>
-        <Route exact path="/" component={Email} />
-        <Route path="/push" component={Push} />
-        <Route path="/sms" component={Sms} />
-        <Route path="/donutChart" component={DonutChart} />
-        <Route path="/createpush" component={CreatePush} />
-        <Route path="/sidebar" component={SideBar} />
-        <Route path="/compare" component={Compare} />
-
-      </div>
+      <div style={{ marginLeft: "48px" }}>
+        <div>
+          <Route exact path="/" component={Email} />
+          <Route path="/push" component={Push} />
+          <Route path="/sms" component={Sms} />
+          <Route path="/donutChart" component={DonutChart} />
+          <Route path="/createpush" component={CreatePush} />
+          <Route path="/sidebar" component={SideBar} />
+          <Route path="/compare" component={Compare} />
+        </div>
       </div>
     </Router>
   );

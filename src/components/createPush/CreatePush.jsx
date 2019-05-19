@@ -2,6 +2,7 @@ import React from "react";
 import "./createpush.css";
 import DonutChart from "../donutChart/DonutChart";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
+import Highlight from "react-highlight";
 
 export default class CreatePush extends React.Component {
   render() {
@@ -12,20 +13,15 @@ export default class CreatePush extends React.Component {
         <div class="container-fluid wd-95">
           <div class="row">
             <div class="col-md-5 bdThin mg-5 mw-24 bg">
-              <div class="snippet">
+              {/* <div class="snippet"> */}
+              <div class="">
                 <div>
-                  <pre class="prettyprint">
-                    <code class="javascript">
-                      {`
-  key :<span class="string">"F4"</span>,
-  shift : <span class="literal">true</span>,
-  callback : {
-    fn : <span class="string">"destroyTheWorld"</span>,
-    scope : <span class="keyword">this</span>
-  `}
-                      }
-                    </code>
-                  </pre>
+                  {/* <Highlight innerHTML={true}>{'<p>Hello world</p>'}</Highlight> */}
+
+                  <Highlight language="javascript">
+                    {`function foo()
+                     { return 'bar' }`}
+                  </Highlight>
                 </div>
               </div>
             </div>
