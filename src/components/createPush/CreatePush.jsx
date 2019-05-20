@@ -83,7 +83,7 @@ export default class CreatePush extends React.Component {
       “alert” : {
          “title” : “${this.state.title}”,
          “subtitle” : “${subtitlePlaceHolder}”,
-         “body” : “${bodyPlaceHolder} ,
+         “body” : “${bodyPlaceHolder}",
       },
       “category” : “Alert”
    },
