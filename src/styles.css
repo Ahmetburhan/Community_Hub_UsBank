@@ -42,7 +42,10 @@ body {
   width: 95% !important;
 }
 .mw-24 {
-  max-width: 24% !important;
+  max-width: 23% !important;
+}
+.mw-46 {
+  max-width: 47% !important;
 }
 .wd-100 {
   width: 100% !important;
