@@ -19,6 +19,7 @@ export default class CreatePush extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      title: "US Bank",
       email: "",
       password: "",
       subtitle: "",
@@ -57,6 +58,12 @@ export default class CreatePush extends React.Component {
 
   render() {
     const { email, password, title, body, subtitle } = this.state;
+    const bodyPlaceHolder =
+      this.state.body == ""
+        ? "Verify unusual activity on Debit Card ending in 1843. Open the mobile app to verify"
+        : this.state.body;
+    const subtitlePlaceHolder =
+      this.state.subtitle == "" ? "" : this.state.subtitle;
 
     return (
       <div>
@@ -70,17 +77,17 @@ export default class CreatePush extends React.Component {
                 <div>
                   {/* <Highlight innerHTML={true}>{'<p>Hello world</p>'}</Highlight> */}
 
-                  <Highlight language="swift">
+                  <Highlight language="javascript">
                     {`{
    “aps” : {
       “alert” : {
-         “title” : “Game Request”,
-         “subtitle” : “Five Card Draw”
-         “body” : “Bob wants to play poker”,
+         “title” : “${this.state.title}”,
+         “subtitle” : “${subtitlePlaceHolder}”,
+         “body” : “${bodyPlaceHolder} ,
       },
-      “category” : “GAME_INVITATION”
+      “category” : “Alert”
    },
-   “gameID” : “12345678”
+   “transactionID” : “14ER45TR51XZ”
 }`}
                   </Highlight>
                 </div>
@@ -90,24 +97,21 @@ export default class CreatePush extends React.Component {
               <h6 id="cardHeader">Form</h6>
 
               <Container>
-                <Form
-                  className="form col-md-5"
-                  onSubmit={e => this.submitForm(e)}
-                >
+                <Form className="form" onSubmit={e => this.submitForm(e)}>
                   <div className="col-md-5" />
                   <Col>
                     <FormGroup>
                       <Label>Title</Label>
                       <Input
-                        type="email"
-                        name="email"
-                        id="exampleEmail"
+                        type="text"
+                        name="title"
+                        id="title"
                         placeholder="Campaign Title"
-                        value={email}
-                        valid={this.state.validate.emailState === "has-success"}
-                        invalid={
-                          this.state.validate.emailState === "has-danger"
-                        }
+                        value={title}
+                        // valid={this.state.validate.emailState === "has-success"}
+                        // invalid={
+                        //   this.state.validate.emailState === "has-danger"
+                        // }
                         onChange={e => {
                           this.validateEmail(e);
                           this.handleChange(e);
@@ -144,10 +148,10 @@ export default class CreatePush extends React.Component {
                     <FormGroup>
                       <Label for="body">Body</Label>
                       <Input
-                        type="body"
+                        type="textarea"
                         name="body"
                         id="body"
-                        placeholder="optional"
+                        placeholder=""
                         value={body}
                         onChange={e => this.handleChange(e)}
                       />
@@ -155,7 +159,7 @@ export default class CreatePush extends React.Component {
                   </Col>
                   <Col>
                     <FormGroup>
-                      <Label for="examplePassword">Password</Label>
+                      <Label for="examplePassword">Approver's ID</Label>
                       <Input
                         type="password"
                         name="password"
@@ -166,7 +170,9 @@ export default class CreatePush extends React.Component {
                       />
                     </FormGroup>
                   </Col>
-                  <Button>Submit</Button>
+                  <Button style={{ float: "right", marginBottom: "20px" }}>
+                    Submit
+                  </Button>
                 </Form>
               </Container>
             </div>
