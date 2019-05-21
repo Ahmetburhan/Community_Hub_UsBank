@@ -89,7 +89,7 @@ export default class CreatePush extends React.Component {
             <div class="col-lg-7 mg-5 ml-175">
               {/* ///////form//////////// */}
               <div class="col mg-5">
-                <h6 id="cardHeader">Form</h6>
+                <h6 id="cardHeader">Create New Push Notification</h6>
 
                 <Container>
                   <Form className="form" onSubmit={e => this.submitForm(e)}>
@@ -144,7 +144,7 @@ export default class CreatePush extends React.Component {
                     <Col>
                       <FormGroup>
                         <Label for="body">Body </Label>
-                        <span classname="floatRight">
+                        <span class="floatRight">
                           {" "}
                           {this.state.body.length} of 160{" "}
                         </span>
