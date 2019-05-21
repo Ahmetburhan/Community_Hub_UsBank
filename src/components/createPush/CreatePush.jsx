@@ -6,7 +6,6 @@ import Highlight from "react-highlight";
 import Hand from "../../assets/images/online_banking_usbank_Finale_cut.png";
 import AppLogo from "../../assets/images/app_logo.jpg";
 
-
 import {
   Container,
   Col,
@@ -64,7 +63,7 @@ export default class CreatePush extends React.Component {
     const { email, password, title, body, subtitle } = this.state;
     const bodyPlaceHolder =
       this.state.body == ""
-        ? "Verify unusual activity on Debit Card ending in 1843. Open the mobile app to verify"
+        ? "Verify unusual activity on Debit Card ending in 1843. Open the mobile app to verify."
         : this.state.body;
     const subtitlePlaceHolder =
       this.state.subtitle == "" ? "" : this.state.subtitle;
@@ -77,9 +76,9 @@ export default class CreatePush extends React.Component {
           <div class="row">
             <div class="col-lg-4 col-md-5 mg-5">
               <div id="appView" style={{ zIndex: "9" }}>
-              <img class="applogo" src={AppLogo} />
-              <span id="pushAppName">U.S. BANK</span>
-              <span class="apnMoment">3m ago</span>
+                <img class="applogo" src={AppLogo} />
+                <span id="pushAppName">U.S. BANK</span>
+                <span class="apnMoment">3m ago</span>
 
                 <h6 id="title">{this.state.title}</h6>
 
@@ -144,7 +143,11 @@ export default class CreatePush extends React.Component {
                     </Col>
                     <Col>
                       <FormGroup>
-                        <Label for="body">Body</Label>
+                        <Label for="body">Body </Label>
+                        <span classname="floatRight">
+                          {" "}
+                          {this.state.body.length} of 160{" "}
+                        </span>
                         <Input
                           type="textarea"
                           name="body"
@@ -167,23 +170,31 @@ export default class CreatePush extends React.Component {
                           onChange={e => this.handleChange(e)}
                         />
                       </FormGroup>
+
+                      <Button
+                        style={{
+                          float: "right",
+                          marginBottom: "20px",
+                          display: "block"
+                        }}
+                      >
+                        Submit
+                      </Button>
                     </Col>
-                    <Button style={{ float: "right", marginBottom: "20px" }}>
-                      Submit
-                    </Button>
                   </Form>
                 </Container>
               </div>
 
               {/* ///////// */}
-              <div class="col snippet">
-                {/* <div class="snippet"> */}
-                <div class="">
-                  <div>
-                    {/* <Highlight innerHTML={true}>{'<p>Hello world</p>'}</Highlight> */}
+              <div class="row bdThin bg">
+                <div class="col snippet">
+                  {/* <div class="snippet"> */}
+                  <div class="">
+                    <div>
+                      {/* <Highlight innerHTML={true}>{'<p>Hello world</p>'}</Highlight> */}
 
-                    <Highlight language="javascript">
-                      {`{
+                      <Highlight language="javascript">
+                        {`{
    “aps” : {
       “alert” : {
          “title” : “${this.state.title}”,
@@ -194,123 +205,12 @@ export default class CreatePush extends React.Component {
    },
    “transactionID” : “14ER45TR51XZ”
 }`}
-                    </Highlight>
+                      </Highlight>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-7 bdThin mg-5 bg">
-              {/* <div class="snippet"> */}
-              <div class="snippet">
-                <div>
-                  {/* <Highlight innerHTML={true}>{'<p>Hello world</p>'}</Highlight> */}
-
-                  <Highlight language="javascript">
-                    {`{
-   “aps” : {
-      “alert” : {
-         “title” : “${this.state.title}”,
-         “subtitle” : “${subtitlePlaceHolder}”,
-         “body” : “${bodyPlaceHolder}",
-      },
-      “category” : “Alert”
-   },
-   “transactionID” : “14ER45TR51XZ”
-}`}
-                  </Highlight>
-                </div>
-              </div>
-            </div>
-            <div class="col bdThin mg-5">
-              <h6 id="cardHeader">Form</h6>
-
-              <Container>
-                <Form className="form" onSubmit={e => this.submitForm(e)}>
-                  <div className="col-md-5" />
-                  <Col>
-                    <FormGroup>
-                      <Label>Title</Label>
-                      <Input
-                        type="text"
-                        name="title"
-                        id="title"
-                        placeholder="Campaign Title"
-                        value={title}
-                        // valid={this.state.validate.emailState === "has-success"}
-                        // invalid={
-                        //   this.state.validate.emailState === "has-danger"
-                        // }
-                        onChange={e => {
-                          this.validateEmail(e);
-                          this.handleChange(e);
-                        }}
-                      />
-                      <FormFeedback valid>
-                        That's a nice looking title you've got there.
-                      </FormFeedback>
-                      {/* <FormFeedback>
-                        Uh oh! Looks like there is an issue with your email.
-                        Please input a correct email.
-                      </FormFeedback> */}
-                      <FormFeedback>
-                        Uh oh! Looks like there is an issue with your input.
-                        Please input a correct title.
-                      </FormFeedback>
-                      <FormText>Please enter Push notification title</FormText>
-                    </FormGroup>
-                  </Col>
-                  <Col>
-                    <FormGroup>
-                      <Label for="subtitle">Subtitle</Label>
-                      <Input
-                        type="subtitle"
-                        name="subtitle"
-                        id="subtitle"
-                        placeholder="optional"
-                        value={subtitle}
-                        onChange={e => this.handleChange(e)}
-                      />
-                    </FormGroup>
-                  </Col>
-                  <Col>
-                    <FormGroup>
-                      <Label for="body">Body</Label>
-                      <Input
-                        type="textarea"
-                        name="body"
-                        id="body"
-                        placeholder=""
-                        value={body}
-                        onChange={e => this.handleChange(e)}
-                      />
-                    </FormGroup>
-                  </Col>
-                  <Col>
-                    <FormGroup>
-                      <Label for="examplePassword">Approver's ID</Label>
-                      <Input
-                        type="password"
-                        name="password"
-                        id="examplePassword"
-                        placeholder="********"
-                        value={password}
-                        onChange={e => this.handleChange(e)}
-                      />
-                    </FormGroup>
-                  </Col>
-                  <Button style={{ float: "right", marginBottom: "20px" }}>
-                    Submit
-                  </Button>
-                </Form>
-              </Container>
-            </div>
-          </div>
-
-          <div class="row">
-            {/* <div class="col bdThin mg-5">
-            </div> */}
           </div>
         </div>
       </div>
