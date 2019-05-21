@@ -12,3 +12,55 @@
   background-color: #333;
   min-width: 400px;
 }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  border-radius: 8px !important;
+}
+
+#appView {
+  z-index: 5;
+  position: absolute;
+  margin-top: 280px;
+  margin-left: 229px;
+  max-width: 200px;
+  max-height: 94px;
+}
+#title {
+  font-family: Nunito;
+  font-weight: 800;
+  margin-bottom: -2px;
+}
+.ml-175 {
+  margin-left: 75px;
+}
+.applogo {
+  border-radius: 20%;
+  width: 22px;
+}
+#pushAppName {
+  font-family: Nunito;
+  text-align: justify;
+  padding-left: 4px;
+  padding-top: 2px;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  color: #656a6f;
+}
+.apnMoment {
+  float: right;
+  font-size: 14px;
+  vertical-align: middle;
+  font-family: Nunito;
+  text-align: justify;
+  padding-left: 4px;
+  padding-top: 2px;
+  -webkit-font-smoothing: antialiased;
+  color: #656a6f;
+}
+h6 {
+  font-size: 0.9rem;
+}

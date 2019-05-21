@@ -3,6 +3,10 @@ import "./createpush.css";
 import DonutChart from "../donutChart/DonutChart";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
 import Highlight from "react-highlight";
+import Hand from "../../assets/images/online_banking_usbank_Finale_cut.png";
+import AppLogo from "../../assets/images/app_logo.jpg";
+
+
 import {
   Container,
   Col,
@@ -19,7 +23,7 @@ export default class CreatePush extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "US Bank",
+      title: "Purchase",
       email: "",
       password: "",
       subtitle: "",
@@ -70,6 +74,132 @@ export default class CreatePush extends React.Component {
         <h5 class="topH5">Create New Push</h5>
         <Breadcrumb />
         <div class="container-fluid wd-95">
+          <div class="row">
+            <div class="col-lg-4 col-md-5 mg-5">
+              <div id="appView" style={{ zIndex: "9" }}>
+              <img class="applogo" src={AppLogo} />
+              <span id="pushAppName">U.S. BANK</span>
+              <span class="apnMoment">3m ago</span>
+
+                <h6 id="title">{this.state.title}</h6>
+
+                <h6>{bodyPlaceHolder}</h6>
+              </div>
+              <img src={Hand} />
+            </div>
+            <div class="col-lg-7 mg-5 ml-175">
+              {/* ///////form//////////// */}
+              <div class="col mg-5">
+                <h6 id="cardHeader">Form</h6>
+
+                <Container>
+                  <Form className="form" onSubmit={e => this.submitForm(e)}>
+                    <div className="col-md-5" />
+                    <Col>
+                      <FormGroup>
+                        <Label>Title</Label>
+                        <Input
+                          type="text"
+                          name="title"
+                          id="title"
+                          placeholder="Campaign Title"
+                          value={title}
+                          // valid={this.state.validate.emailState === "has-success"}
+                          // invalid={
+                          //    this.state.validate.emailState === "has-danger"
+                          // }
+                          onChange={e => {
+                            this.validateEmail(e);
+                            this.handleChange(e);
+                          }}
+                        />
+                        <FormFeedback valid>
+                          That's a nice looking title you've got there.
+                        </FormFeedback>
+                        {/* <FormFeedback>
+                        Uh oh! Looks like there is an issue with your email.
+                        Please input a correct email.
+                      </FormFeedback> */}
+                        <FormFeedback>
+                          Uh oh! Looks like there is an issue with your input.
+                          Please input a correct title.
+                        </FormFeedback>
+                        <FormText>
+                          Please enter Push notification title
+                        </FormText>
+                      </FormGroup>
+                    </Col>
+                    <Col>
+                      <FormGroup>
+                        <Label for="subtitle">Subtitle</Label>
+                        <Input
+                          type="subtitle"
+                          name="subtitle"
+                          id="subtitle"
+                          placeholder="optional"
+                          value={subtitle}
+                          onChange={e => this.handleChange(e)}
+                        />
+                      </FormGroup>
+                    </Col>
+                    <Col>
+                      <FormGroup>
+                        <Label for="body">Body</Label>
+                        <Input
+                          type="textarea"
+                          name="body"
+                          id="body"
+                          placeholder=""
+                          value={body}
+                          onChange={e => this.handleChange(e)}
+                        />
+                      </FormGroup>
+                    </Col>
+                    <Col>
+                      <FormGroup>
+                        <Label for="examplePassword">Approver's ID</Label>
+                        <Input
+                          type="password"
+                          name="password"
+                          id="examplePassword"
+                          placeholder="********"
+                          value={password}
+                          onChange={e => this.handleChange(e)}
+                        />
+                      </FormGroup>
+                    </Col>
+                    <Button style={{ float: "right", marginBottom: "20px" }}>
+                      Submit
+                    </Button>
+                  </Form>
+                </Container>
+              </div>
+
+              {/* ///////// */}
+              <div class="col snippet">
+                {/* <div class="snippet"> */}
+                <div class="">
+                  <div>
+                    {/* <Highlight innerHTML={true}>{'<p>Hello world</p>'}</Highlight> */}
+
+                    <Highlight language="javascript">
+                      {`{
+   “aps” : {
+      “alert” : {
+         “title” : “${this.state.title}”,
+         “subtitle” : “${subtitlePlaceHolder}”,
+         “body” : “${bodyPlaceHolder}",
+      },
+      “category” : “Alert”
+   },
+   “transactionID” : “14ER45TR51XZ”
+}`}
+                    </Highlight>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="row">
             <div class="col-md-7 bdThin mg-5 bg">
               {/* <div class="snippet"> */}
