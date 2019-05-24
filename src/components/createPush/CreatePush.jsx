@@ -93,105 +93,100 @@ export default class CreatePush extends React.Component {
               </div>
               <img src={Hand} />
             </div>
-            <div class="col-lg-7 mg-5 ml-175">
-              {/* ///////form//////////// */}
-              <div class="col-auto" style={{ maxWidth: "350px" }}>
-                <h6 id="cardHeader">Create New Push Notification</h6>
-
-                <Container>
-                  <Form className="form" onSubmit={e => this.submitForm(e)}>
-                    <div className="col" />
-                    <Col>
-                      <FormGroup>
-                        <Label>Title</Label>
-                        <Input
-                          type="text"
-                          name="title"
-                          id="title"
-                          placeholder="Campaign Title"
-                          value={title}
-                          // valid={this.state.validate.emailState === "has-success"}
-                          // invalid={
-                          //    this.state.validate.emailState === "has-danger"
-                          // }
-                          onChange={e => {
-                            this.validateEmail(e);
-                            this.handleChange(e);
-                          }}
-                        />
-                        <FormFeedback valid>
-                          That's a nice looking title you've got there.
-                        </FormFeedback>
-                        {/* <FormFeedback>
+            <div className="col-lg-7 mg-5 ml-175 clearfix">
+              <h6 id="cardHeader">Create New Push Notification</h6>
+              <div className="float-left" style={{ width: "400px" }}>
+                {/* <Container> */}
+                <Form className="form" onSubmit={e => this.submitForm(e)}>
+                  <Col>
+                    <FormGroup>
+                      <Label>Title</Label>
+                      <Input
+                        type="text"
+                        name="title"
+                        id="title"
+                        placeholder="Campaign Title"
+                        value={title}
+                        // valid={this.state.validate.emailState === "has-success"}
+                        // invalid={
+                        //    this.state.validate.emailState === "has-danger"
+                        // }
+                        onChange={e => {
+                          this.validateEmail(e);
+                          this.handleChange(e);
+                        }}
+                      />
+                      <FormFeedback valid>
+                        That's a nice looking title you've got there.
+                      </FormFeedback>
+                      {/* <FormFeedback>
                         Uh oh! Looks like there is an issue with your email.
                         Please input a correct email.
                       </FormFeedback> */}
-                        <FormFeedback>
-                          Uh oh! Looks like there is an issue with your input.
-                          Please input a correct title.
-                        </FormFeedback>
-                        <FormText>
-                          Please enter Push notification title
-                        </FormText>
-                      </FormGroup>
-                    </Col>
-                    <Col>
-                      <FormGroup>
-                        <Label for="subtitle">Subtitle</Label>
-                        <Input
-                          type="subtitle"
-                          name="subtitle"
-                          id="subtitle"
-                          placeholder="optional"
-                          value={subtitle}
-                          onChange={e => this.handleChange(e)}
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col>
-                      <FormGroup>
-                        <Label for="body">Body </Label>
-                        <span class="floatRight">
-                          {" "}
-                          {this.state.body.length} of 160{" "}
-                        </span>
-                        <Input
-                          type="textarea"
-                          name="body"
-                          id="body"
-                          placeholder=""
-                          value={body}
-                          onChange={e => this.handleChange(e)}
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col>
-                      <FormGroup>
-                        <Label for="examplePassword">Approver's ID</Label>
-                        <Input
-                          type="password"
-                          name="password"
-                          id="examplePassword"
-                          placeholder="********"
-                          value={password}
-                          onChange={e => this.handleChange(e)}
-                        />
-                      </FormGroup>
+                      <FormFeedback>
+                        Uh oh! Looks like there is an issue with your input.
+                        Please input a correct title.
+                      </FormFeedback>
+                      <FormText>Please enter Push notification title</FormText>
+                    </FormGroup>
+                  </Col>
+                  <Col>
+                    <FormGroup>
+                      <Label for="subtitle">Subtitle</Label>
+                      <Input
+                        type="subtitle"
+                        name="subtitle"
+                        id="subtitle"
+                        placeholder="optional"
+                        value={subtitle}
+                        onChange={e => this.handleChange(e)}
+                      />
+                    </FormGroup>
+                  </Col>
+                  <Col>
+                    <FormGroup>
+                      <Label for="body">Body </Label>
+                      <span class="floatRight">
+                        {" "}
+                        {this.state.body.length} of 160{" "}
+                      </span>
+                      <Input
+                        type="textarea"
+                        name="body"
+                        id="body"
+                        placeholder=""
+                        value={body}
+                        onChange={e => this.handleChange(e)}
+                      />
+                    </FormGroup>
+                  </Col>
+                  <Col>
+                    <FormGroup>
+                      <Label for="examplePassword">Approver's ID</Label>
+                      <Input
+                        type="password"
+                        name="password"
+                        id="examplePassword"
+                        placeholder="********"
+                        value={password}
+                        onChange={e => this.handleChange(e)}
+                      />
+                    </FormGroup>
 
-                      <Button
-                        style={{
-                          float: "right",
-                          marginBottom: "20px",
-                          display: "block"
-                        }}
-                      >
-                        Submit
-                      </Button>
-                    </Col>
-                  </Form>
-                </Container>
+                    <Button
+                      style={{
+                        float: "right",
+                        marginBottom: "20px",
+                        display: "block"
+                      }}
+                    >
+                      Submit
+                    </Button>
+                  </Col>
+                </Form>
+                {/* </Container> */}
               </div>
-              <div class="col-auto" style={{ maxWidth: "150px" }}>
+              <div className="float-right" style={{ maxWidth: "250px" }}>
                 <h6 id="cardHeader">Dynamic Values from Hogan</h6>
                 {dValues.map(each => {
                   return (
