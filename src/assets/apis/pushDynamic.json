@@ -1,0 +1,11 @@
+{
+  "_id": {
+    "time": 1558632999000,
+    "machine": 2020048005,
+    "inc": -649418367,
+    "timeSecond": 1558632999,
+    "new": false
+  },
+  "templateType": "push",
+  "dynamicFields": "productcode,subproductcode,companycode,cardlastfour,amount"
+}

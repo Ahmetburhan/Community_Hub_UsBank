@@ -5,7 +5,7 @@ import Breadcrumb from "../breadcrumb/Breadcrumb";
 import Highlight from "react-highlight";
 import Hand from "../../assets/images/online_banking_usbank_Finale_cut.png";
 import AppLogo from "../../assets/images/app_logo.jpg";
-
+import dynamicValues from "../../assets/apis/pushDynamic.json";
 import {
   Container,
   Col,
@@ -53,6 +53,12 @@ export default class CreatePush extends React.Component {
       [name]: value
     });
   };
+  dValueAppend = val => {
+    this.setState((prevState, props) => {
+      console.log(props);
+      return { body: prevState.body + " " + val };
+    });
+  };
 
   submitForm(e) {
     e.preventDefault();
@@ -67,7 +73,8 @@ export default class CreatePush extends React.Component {
         : this.state.body;
     const subtitlePlaceHolder =
       this.state.subtitle == "" ? "" : this.state.subtitle;
-
+    const dValues = dynamicValues.dynamicFields.split(",");
+    console.log(dValues);
     return (
       <div>
         <h5 class="topH5">Create New Push</h5>
@@ -88,12 +95,12 @@ export default class CreatePush extends React.Component {
             </div>
             <div class="col-lg-7 mg-5 ml-175">
               {/* ///////form//////////// */}
-              <div class="col mg-5">
+              <div class="col-auto" style={{ maxWidth: "50%" }}>
                 <h6 id="cardHeader">Create New Push Notification</h6>
 
                 <Container>
                   <Form className="form" onSubmit={e => this.submitForm(e)}>
-                    <div className="col-md-5" />
+                    <div className="col" />
                     <Col>
                       <FormGroup>
                         <Label>Title</Label>
@@ -184,8 +191,20 @@ export default class CreatePush extends React.Component {
                   </Form>
                 </Container>
               </div>
-
-              {/* ///////// */}
+              <div class="col" style={{ maxWidth: "50%" }}>
+                <h6 id="cardHeader">Dynamic Values from Hogan</h6>
+                {dValues.map(each => {
+                  return (
+                    <Button
+                      outline
+                      color="primary"
+                      onClick={() => this.dValueAppend(each)}
+                    >
+                      {each}
+                    </Button>
+                  );
+                })}
+              </div>
               <div class="row bdThin bg">
                 <div class="col snippet">
                   {/* <div class="snippet"> */}

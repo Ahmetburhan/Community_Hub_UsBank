@@ -67,3 +67,10 @@ h6 {
 .floatRight {
   float: right;
 }
+.dVars {
+  list-style: none;
+  margin-top: 0;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-style: oblique;
+}
