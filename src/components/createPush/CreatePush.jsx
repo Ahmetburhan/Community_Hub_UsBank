@@ -56,7 +56,7 @@ export default class CreatePush extends React.Component {
   dValueAppend = val => {
     this.setState((prevState, props) => {
       console.log(props);
-      return { body: prevState.body + " " + val };
+      return { body: prevState.body + " " + "{{" + val + "}}" };
     });
   };
 
@@ -95,7 +95,7 @@ export default class CreatePush extends React.Component {
             </div>
             <div class="col-lg-7 mg-5 ml-175">
               {/* ///////form//////////// */}
-              <div class="col-auto" style={{ maxWidth: "50%" }}>
+              <div class="col-auto" style={{ maxWidth: "350px" }}>
                 <h6 id="cardHeader">Create New Push Notification</h6>
 
                 <Container>
@@ -191,7 +191,7 @@ export default class CreatePush extends React.Component {
                   </Form>
                 </Container>
               </div>
-              <div class="col" style={{ maxWidth: "50%" }}>
+              <div class="col-auto" style={{ maxWidth: "150px" }}>
                 <h6 id="cardHeader">Dynamic Values from Hogan</h6>
                 {dValues.map(each => {
                   return (
@@ -199,6 +199,7 @@ export default class CreatePush extends React.Component {
                       outline
                       color="primary"
                       onClick={() => this.dValueAppend(each)}
+                      style={{ margin: "5px" }}
                     >
                       {each}
                     </Button>
