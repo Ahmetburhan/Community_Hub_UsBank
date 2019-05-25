@@ -22,11 +22,11 @@ textarea {
 }
 
 #appView {
-  z-index: 5;
+  /* z-index: 1; */
   position: absolute;
-  margin-top: 280px;
-  margin-left: 229px;
-  max-width: 200px;
+  margin-top: 184px;
+  margin-left: 78px;
+  max-width: 205px;
   max-height: 94px;
 }
 #title {
@@ -62,7 +62,7 @@ textarea {
   color: #656a6f;
 }
 h6 {
-  font-size: 0.9rem !important;
+  font-size: 0.975rem !important;
 }
 .floatRight {
   float: right;

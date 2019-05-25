@@ -84,7 +84,7 @@ export default class CreateSms extends React.Component {
         <div class="container-fluid wd-95">
           <div class="row">
             <div class="col-lg-4 col-md-5 mg-5">
-              <div id="appView" style={{ zIndex: "9" }}>
+              <div id="appView" style={{ zIndex: "0" }}>
                 <img class="applogo" src={AppLogo} />
                 <span id="pushAppName">U.S. BANK</span>
                 <span class="apnMoment">3m ago</span>
@@ -95,7 +95,7 @@ export default class CreateSms extends React.Component {
               </div>
               <img src={iPhoneX} style={{ width: "390px" }} />
             </div>
-            <div className="col-lg-7 mg-5 ml-175 clearfix">
+            <div className="col-lg-7 mg-5 clearfix">
               <h6 id="cardHeader">Create New SMS Notification</h6>
               <div className="float-left" style={{ width: "400px" }}>
                 {/* <Container> */}
