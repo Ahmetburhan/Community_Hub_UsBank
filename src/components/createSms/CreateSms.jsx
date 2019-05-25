@@ -1,11 +1,13 @@
 import React from "react";
-import "./createpush.css";
+import "./createsms.css";
 import DonutChart from "../donutChart/DonutChart";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
 import Highlight from "react-highlight";
 import Hand from "../../assets/images/online_banking_usbank_Finale_cut.png";
 import AppLogo from "../../assets/images/app_logo.jpg";
 import dynamicValues from "../../assets/apis/pushDynamic.json";
+import iPhoneX from "../../assets/images/ios11_header_usbank.png";
+
 import {
   Container,
   Col,
@@ -18,7 +20,7 @@ import {
   FormFeedback
 } from "reactstrap";
 // import "/no"
-export default class CreatePush extends React.Component {
+export default class CreateSms extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -77,7 +79,7 @@ export default class CreatePush extends React.Component {
     console.log(dValues);
     return (
       <div>
-        <h5 class="topH5">Create New Push</h5>
+        <h5 class="topH5">Create SMS</h5>
         <Breadcrumb />
         <div class="container-fluid wd-95">
           <div class="row">
@@ -91,10 +93,10 @@ export default class CreatePush extends React.Component {
 
                 <h6>{bodyPlaceHolder}</h6>
               </div>
-              <img src={Hand} />
+              <img src={iPhoneX} style={{ width: "390px" }} />
             </div>
             <div className="col-lg-7 mg-5 ml-175 clearfix">
-              <h6 id="cardHeader">Create New Push Notification</h6>
+              <h6 id="cardHeader">Create New SMS Notification</h6>
               <div className="float-left" style={{ width: "400px" }}>
                 {/* <Container> */}
                 <Form className="form" onSubmit={e => this.submitForm(e)}>

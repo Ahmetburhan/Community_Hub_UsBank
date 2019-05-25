@@ -17,6 +17,7 @@ import Sms from "../src/components/sms/Sms";
 import Navbar from "../src/components/navbar/Navbar";
 import DonutChart from "../src/components/donutChart/DonutChart";
 import CreatePush from "../src/components/createPush/CreatePush";
+import CreateSms from "../src/components/createSms/CreateSms";
 
 import SideBar from "../src/components/sidebar/SideBar";
 import Compare from "../src/components/compare/Compare";
@@ -36,6 +37,7 @@ function App() {
           <Route path="/createpush" component={CreatePush} />
           <Route path="/sidebar" component={SideBar} />
           <Route path="/compare" component={Compare} />
+          <Route path="/createsms" component={CreateSms} />
         </div>
       </div>
     </Router>
