@@ -24,7 +24,7 @@ export default class CreatePush extends React.Component {
     this.state = {
       title: "Purchase",
       email: "",
-      password: "",
+      approversID: "",
       subtitle: "",
       body: "",
       validate: {
@@ -62,7 +62,13 @@ export default class CreatePush extends React.Component {
 
   submitForm(e) {
     e.preventDefault();
-    console.log(`Email: ${this.state.email}`);
+    const data = new FormData(e.target);
+    console.log(e.target);
+    console.log(data);
+    fetch("https://localhost:8080/api/form-submit-url", {
+      method: "POST",
+      body: data
+    });
   }
 
   render() {
@@ -97,7 +103,12 @@ export default class CreatePush extends React.Component {
               <h6 id="cardHeader">Create New Push Notification</h6>
               <div className="float-left" style={{ width: "400px" }}>
                 {/* <Container> */}
-                <Form className="form" onSubmit={e => this.submitForm(e)}>
+                <form
+                  action="http://foo.com"
+                  method="post"
+                  className="form"
+                  onSubmit={e => this.submitForm(e)}
+                >
                   <Col>
                     <FormGroup>
                       <Label>Title</Label>
@@ -165,8 +176,8 @@ export default class CreatePush extends React.Component {
                       <Label for="examplePassword">Approver's ID</Label>
                       <Input
                         type="password"
-                        name="password"
-                        id="examplePassword"
+                        name="approversID"
+                        id="approversID"
                         placeholder="********"
                         value={password}
                         onChange={e => this.handleChange(e)}
@@ -183,7 +194,7 @@ export default class CreatePush extends React.Component {
                       Submit
                     </Button>
                   </Col>
-                </Form>
+                </form>
                 {/* </Container> */}
               </div>
               <div
@@ -205,7 +216,7 @@ export default class CreatePush extends React.Component {
                 })}
               </div>
               <div class="row bdThin clearfix float-left bg">
-                <div class="col snippet">
+                <div class="col snippet" style={{ minWidth: "700px" }}>
                   {/* <div class="snippet"> */}
                   <div class="">
                     <div>
