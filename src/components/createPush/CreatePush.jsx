@@ -82,7 +82,7 @@ export default class CreatePush extends React.Component {
         <div class="container-fluid wd-95">
           <div class="row">
             <div class="col-lg-4 col-md-5 mg-5">
-              <div id="appView" style={{ zIndex: "9" }}>
+              <div class="appView" style={{ zIndex: "9" }}>
                 <img class="applogo" src={AppLogo} />
                 <span id="pushAppName">U.S. BANK</span>
                 <span class="apnMoment">3m ago</span>

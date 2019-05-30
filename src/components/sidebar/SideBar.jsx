@@ -63,6 +63,8 @@ export default class SideBar extends React.Component {
             </span>
           </Link>
           {/* </NavLink> */}
+          <Link to="/createsms">
+
           <span tabindex="0">
             <div class="elements__IconContainer-sc-1evjtfp-1 hjAeFz">
               <svg width="1em" height="1em" viewBox="0 0 40 40">
@@ -85,6 +87,7 @@ export default class SideBar extends React.Component {
               </svg>
             </div>
           </span>
+          </Link>
           <span tabindex="0">
             <div class="elements__IconContainer-sc-1evjtfp-1 hjAeFz">
               <svg width="1em" height="1em" viewBox="0 0 40 40">
