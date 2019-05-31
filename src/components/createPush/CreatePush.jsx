@@ -76,10 +76,20 @@ export default class CreatePush extends React.Component {
       ios_sound: ""
     };
     console.log(data);
-    fetch("https://10.111.21.233:8087/communicationhub/template/store", {
+    fetch("http://vmiksa69901cst:8087/communicationhub/template/store", {
       method: "POST",
-      body: data
-    });
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        console.log(response);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   render() {
