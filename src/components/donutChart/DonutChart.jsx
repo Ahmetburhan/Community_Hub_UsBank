@@ -2,15 +2,15 @@ import "./donutchart.css";
 import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2";
 
-Chart.defaults.global.animation.animationSteps = 100;
-Chart.defaults.global.animation.duration = 3000;
-Chart.defaults.global.animation.animationEasing = "easeInOutBounce";
-Chart.defaults.global.animation.animateScale = true;
-Chart.defaults.global.animation.bezierCurve = true;
-Chart.defaults.global.animation.bezierCurveTension = 0.4;
-Chart.defaults.global.animation.onComplete = () => {
-  console.log("its done");
-};
+// Chart.defaults.global.animation.animationSteps = 100;
+// Chart.defaults.global.animation.duration = 3000;
+// Chart.defaults.global.animation.animationEasing = "easeInOutBounce";
+// Chart.defaults.global.animation.animateScale = true;
+// Chart.defaults.global.animation.bezierCurve = true;
+// Chart.defaults.global.animation.bezierCurveTension = 0.4;
+// Chart.defaults.global.animation.onComplete = () => {
+//   console.log("its done");
+// };
 // Chart.defaults.global.
 
 export default class DonutChart extends Component {
@@ -73,10 +73,10 @@ export default class DonutChart extends Component {
       }
     };
     const chartLabel = this.state.data && this.state.data.labels[0];
-    console.log(chartLabel)
+    console.log(chartLabel);
     return (
       <div>
-      <h6 class="cardHeader">{chartLabel}</h6>
+        <h6 class="cardHeader">{chartLabel}</h6>
         <Doughnut
           width="75"
           height="75"

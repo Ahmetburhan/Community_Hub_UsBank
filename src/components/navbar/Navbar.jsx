@@ -13,8 +13,8 @@ import {
 import HubLogo from "../../assets/images/the_hub.png";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faCoffee } from "@fortawesome/react-fontawesome";
 
 import "./navbar.css";
 export default class Navbar extends React.Component {
@@ -93,9 +93,9 @@ export default class Navbar extends React.Component {
             isOpen={this.state.dropdownOpen}
             toggle={this.toggle}
           >
-            <DropdownToggle nav>
+            {/* <DropdownToggle nav>
               <FontAwesomeIcon icon={faCoffee} />
-            </DropdownToggle>
+            </DropdownToggle> */}
             <DropdownMenu>
               <DropdownItem header>Create a New</DropdownItem>
               <DropdownItem divider />

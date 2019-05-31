@@ -62,10 +62,21 @@ export default class CreatePush extends React.Component {
 
   submitForm(e) {
     e.preventDefault();
-    const data = new FormData(e.target);
-    console.log(e.target);
+    // const data = new FormData(e.target);
+    // console.log(e.target);
+    const data = {
+      templateId: "mpn_p",
+      templateName: "purchase_alert_mobile_push_notification",
+      title: this.state.title,
+      body: this.state.body,
+      icon: "",
+      badge: "",
+      category: "",
+      android_sound: "",
+      ios_sound: ""
+    };
     console.log(data);
-    fetch("https://localhost:8080/api/form-submit-url", {
+    fetch("https://10.111.21.233:8087/communicationhub/template/store", {
       method: "POST",
       body: data
     });
